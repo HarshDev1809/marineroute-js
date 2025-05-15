@@ -1,6 +1,6 @@
 {
   "name": "marineroute-js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A javascript package to find sea route between two coordinates",
   "main": "index.js",
   "scripts": {
