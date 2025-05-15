@@ -1,0 +1,27 @@
+{
+  "name": "marineroute-js",
+  "version": "1.0.0",
+  "description": "A javascript package to find sea route between two coordinates",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HarshDev1809/marineroute-js.git"
+  },
+  "keywords": [
+    "sea",
+    "sea",
+    "routes",
+    "routes",
+    "map",
+    "marine"
+  ],
+  "author": "dev182000",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HarshDev1809/marineroute-js/issues"
+  },
+  "homepage": "https://github.com/HarshDev1809/marineroute-js#readme"
+}
