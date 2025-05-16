@@ -2,7 +2,7 @@ import { getRoute } from "./utils/getRoute.js";
 import { ErrorLog } from "./utils/logger.js";
 import { validateCoordinates } from "./utils/validateCoordinates.js";
 
-export const seaRoute = async (coordinates, suez = true) => {
+const seaRoute = async (coordinates, suez = true) => {
   try {
     validateCoordinates(coordinates);
     let resultCoords = [];
@@ -30,3 +30,5 @@ export const seaRoute = async (coordinates, suez = true) => {
     ErrorLog(error.message);
   }
 };
+
+export default seaRoute;
