@@ -32,7 +32,7 @@ export const getRoute = (input) => {
     pythonProcess.on("close", () => {
       try {
         const message = JSON.parse(output);
-        resolve(JSON.stringify(message));
+        resolve(message);
       } catch (err) {
         console.error("[ERROR] Failed to parse output:", output);
         reject(err);

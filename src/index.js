@@ -1,7 +1,5 @@
-import { checkCrossing } from "./utils/checkCrossing.js";
-import { getCrossedRoute } from "./utils/getCrossedRoute.js";
 import { getRoute } from "./utils/getRoute.js";
-import { ErrorLog, Log, WarnLog } from "./utils/logger.js";
+import { ErrorLog } from "./utils/logger.js";
 import { validateCoordinates } from "./utils/validateCoordinates.js";
 
 export const seaRoute = async (coordinates, suez = true) => {
@@ -17,12 +15,10 @@ export const seaRoute = async (coordinates, suez = true) => {
           suez: suez,
         })
 
-        const parsedResult = JSON.parse(result);
-
-        resultCoords = [...resultCoords, ...parsedResult.data.geometry.coordinates]
-        totalDistance += Number(parsedResult.data.properties.length).toFixed(2)
+        resultCoords = [...resultCoords, ...result.data.geometry.coordinates]
+        totalDistance += Number(result.data.properties.length).toFixed(2)
         if(i === 0){
-            distanceUnit = parsedResult.data.properties.units
+            distanceUnit = result.data.properties.units
         }
     }
     return {
@@ -31,6 +27,6 @@ export const seaRoute = async (coordinates, suez = true) => {
         distance_unit : distanceUnit
     }
   } catch (error) {
-    WarnLog(error.message);
+    ErrorLog(error.message);
   }
 };
